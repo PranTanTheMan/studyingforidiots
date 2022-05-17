@@ -1,16 +1,84 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
+
+/* 
+background: -webkit-linear-gradient(to bottom, #fffde4, #005aa7);
+background: linear-gradient(to bottom, #fffde4, #005aa7);
+ */
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #191919;
+  color: #fff;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+nav {
+  margin: 1rem auto 3rem;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+nav .logo {
+  margin-left: 2rem;
+  color: #fff;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 30px;
+  color: #777;
+  border-top: 1px solid rgba(95, 95, 95, 0.541);
+}
+
+.links {
+  align-self: center;
+  padding: 0 0.5rem 0 0;
+}
+
+.linkItem {
+  margin-right: 4.5rem;
+  font-size: larger;
+  position: relative;
+}
+.linkItem::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0.12rem;
+  background-color: #198aec;
+  left: 50%;
+  bottom: -0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkItem:hover {
+  cursor: pointer;
+}
+
+.linkItem:hover::after {
+  width: 100%;
+  left: 0;
+  cursor: pointer;
+}
+
+.footerLinks {
+  transition: all 0.3s;
+}
+
+.footerLinks:hover {
+  color: rgb(51, 50, 50);
+  cursor: pointer;
+}
+
+.coffeeLink {
+  height: 30px;
+  width: 117px;
 }
